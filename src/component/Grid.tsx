@@ -7,12 +7,12 @@ import { ColDef } from 'ag-grid-community';
 
 const App = () => {
 
-  const gridRef = useRef<any>()  // Optional - for accessing Grid's API
+  const gridRef = useRef<AgGridReact<any>>(null)  // Optional - for accessing Grid's API
   const [rowData, setRowData] = useState()  // Set rowData to Array of Objects, one Object per Row
 
   // Each Column Definition results in one Column.
   const [columnDefs, setColumnDefs] = useState<ColDef[]>([
-    { field: 'make', filter: true },
+    { field: 'make', filter: true, type: 'rightAligned' },
     { field: 'model', filter: true },
     { field: 'price', filter: 'agDateColumnFilter' }
   ])
