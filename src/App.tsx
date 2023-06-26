@@ -5,10 +5,12 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import './App.css';
-import GridStatusBar from './GridStatusBar';
+import MyGrid from './component/Grid';
 
 const App = () => {
-  return <GridStatusBar />
+  return <div style={{ height: '400px', width: '400px' }}>
+    <MyGrid />
+  </div>
 };
 
 export default App;
